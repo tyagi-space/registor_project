@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Insta-Video Downloader</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="Instagram Video Downloader or Insta-Video Downloader is developed as Instagram does not allow you to download videos directly but you like to. Insta-Video Downlaoder extracts mp4 video link from the Instagram post URL and downloads the video irrespective of the device (desktop or mobile or tablet).">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <style>::-webkit-input-placeholder{text-align:center}:-moz-placeholder{text-align:center}::-moz-placeholder{text-align:center}:-ms-input-placeholder{text-align:center}body{font-size:16px}.header{text-align:center;font-family:Lobster;font-size:50px;color:#d9534f}#downloadVideo{font-size:24px;margin-top:2%}.content{padding-top:5%}.footer{background-color:#000;padding:1.5rem 0;word-spacing:10px;color:#d9534f;left:0;right:0;bottom:0;position:fixed}.fa{color:#d9534f}input{text-align:center}
+        
+        input{
+                    border-style:groove;
+                    width: 50%;
+                    padding: 10px 100px;
+                    margin: 7px 0;
+                    box-sizing:border-box;
+                    color: orange;
+                    }
+                .btn btn-sumbit{
+                    margin-left: 150px;
+                    padding-left: 50%;
+                }
+        </style>
+
+    </head>
+<body style="padding-top: 10px" class="jumbotron">
+    <nav style="padding: 10px"class="navbar navbar-light bg-light" >
+        <div >
+            <ul class="navbar-nav mr-auto">
+                <li class="btn btn-outline-success"><a style="font-size: large ;" href="{% url 'index' %}">HomePage</a></li>
+                <li class="btn btn-outline-success"><a style="font-size: large ;" href="{% url 'admin:index' %}">Admin</a></li>
+                <li class="btn btn-outline-success"><a style="font-size: large ;" href="{% url 'basic_app:register' %}">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        {% block body_block %}
+        {% endblock %}
+    </div>
+</body>
+</html>

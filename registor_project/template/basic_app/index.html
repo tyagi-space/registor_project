@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% extends 'basic_app/basic.html' %}
+{% load static %}
+{% block body_block %}
+<div class="container">
+	<div class="header">
+		Insta-Media Downloader
+	</div>
+	<div class="container">
+		{% if got %}
+		<h1 style="color:brown ; font:bold;">Thnak You for using our service</h1>
+		{% else %}
+		<p class="text-center">Enter Instagram Image / Video link & click on 'Get Media' button</p>
+			<form style="padding-left:370px; font-size: large ; font-stretch: extra-expanded;" method="POST" >
+				{% csrf_token %}
+				<!--<input type="text" id="postUrl" class="form-control" placeholder="Instagram Post URL"/> -->
+				{{ url_value.as_p }}
+				<input style="border-radius: 400px; margin-left: 108px;" type="submit" value="SUBMIT">
+			</form>
+		{% endif %}
+	</div>
+	<hr style="margin: 10rem 0 4rem 0"/>
+	<!--<i>
+	Did you like some image / video on Instagram and want to save that Instagram image / video on your device? Don't worry, you can download it here on any device like iPhone, Android or Computer etc.!!
+	</i>
+	<div class="panel panel-danger" style="margin-top:2rem">
+		<div class="panel-heading text-center h3" style="margin-top:0">How to Download Instagram Image / Video Online?</div>
+		<div class="panel-body">
+			<ul>
+				<li>Go to Instagram and open the image / video which you want to download.</li>
+				<li>Copy the Instagram image / video URL </li>
+				<ul>
+					<li>On Instagram App: Tap on more options ( <i class="fa fa-ellipsis-v" aria-hidden="true"></i> ), and tap on "Copy Share URL" or "Copy link". This will copy the link of image / video to the clipboard.</li>
+					<li>On Web browser: Open the Instagram post containing image / video in new tab, and copy the URL from URL bar of the browser. </li>
+				</ul>
+				<li>Now, paste the image / video link in above input box, and click/tap on 'Get Media' button</li>
+				<li>Right Click on the media that's loaded below and click Save.</li>
+				<li>Instagram image / video will be saved to your device.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="panel panel-danger" style="margin: 4rem 0 10rem 0">
+		<div class="panel-body">
+			<p>Instagram Media Downloader or Insta-Media Downloader is developed as Instagram does not allow you to download images / videos directly but you like to. Insta-Media Downlaoder extracts image / mp4 video link from the Instagram post URL and downloads the image / video irrespective of the device (desktop or mobile or tablet).</p>
+			<p><b>Note</b>: Some of the Instagram images / videos / accounts are private. Private Instagram images / videos are not accessible and can't be downloaded using this tool.</p>
+			<p>This tool just uses the information that is freely accessible on Instagram and presents it in a different manner. Copyright and trademarks => refer to their respective owners.</p>
+		</div>
+	</div>
+</div>-->
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-7 text-right">
+				&copy; 2020
+			</div>
+			<div class="col-xs-5 text-right">
+				<a href="https://github.com/tyagi-space/" target="_blank"><i class="fa fa-github"></i></a>
+				<a href="https://www.facebook.com/kanha.shradh420/" target="_blank"><i class="fa fa-facebook"></i></a>					
+				<a href="https://twitter.com/kanhatyagi402" target="_blank"><i class="fa fa-external-link"></i></a>					
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="{% static "script\script.js" %}"></script>
+{% endblock %}
